@@ -45,6 +45,7 @@
 		message = "Showing Results for '" + type + "'";
 	} else {
 		products = prodDao.getAllProducts();
+                products = prodDao.searchProducts(search);
 	}
 	if (products.isEmpty()) {
 		message = "No items found for the search '" + (search != null ? search : type) + "'";
